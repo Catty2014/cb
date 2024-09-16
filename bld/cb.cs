@@ -181,6 +181,10 @@ public static class CB
 					compiler = "riscv64-linux-gnu-gcc";
 					break;
 
+                case "loongarch64":
+                    compiler = "loongarch64-unknown-linux-gnu-gcc";
+                    break;
+
 				case "musl-x64":
 					compiler = "musl-gcc";
 					tw.Write(" -m64\n");
@@ -1394,18 +1398,9 @@ public static class CB
 
 			var targets_cross = new linux_target[]
 			{
-				new linux_target("musl-x64"),
-				new linux_target("musl-arm64"),
-				new linux_target("musl-armhf"),
-				new linux_target("musl-s390x"),
-				new linux_target("musl-riscv64"),
 				new linux_target("arm64"),
-				new linux_target("armhf"),
-				new linux_target("armsf"),
-				new linux_target("mips64"),
-				new linux_target("s390x"),
-				new linux_target("ppc64le"),
 				new linux_target("riscv64"),
+                new linux_target("loongarch64"),
 			};
 
 			write_linux_multi(
@@ -1679,18 +1674,9 @@ public static class CB
 
 			var targets_cross = new linux_target[]
 			{
-				new linux_target("musl-x64"),
-				new linux_target("musl-arm64"),
-				new linux_target("musl-armhf"),
-				new linux_target("musl-s390x"),
-				new linux_target("musl-riscv64"),
 				new linux_target("arm64"),
-				new linux_target("armhf"),
-				new linux_target("armsf"),
-				new linux_target("mips64"),
-				new linux_target("s390x"),
-				new linux_target("ppc64le"),
 				new linux_target("riscv64"),
+                new linux_target("loongarch64"),
 			};
 
 			write_linux_multi(
@@ -2493,11 +2479,8 @@ public static class CB
 
 			var targets_cross = new linux_target[]
 			{
-				new linux_target("musl-s390x"),
-				new linux_target("musl-riscv64"),
-				new linux_target("s390x"),
-				new linux_target("ppc64le"),
 				new linux_target("riscv64"),
+                new linux_target("loongarch64"),
 			};
 
 			write_linux_multi(
@@ -2831,17 +2814,9 @@ public static class CB
 
 			var targets_cross = new linux_target[]
 			{
-				new linux_target("musl-x64"),
-				new linux_target("musl-arm64"),
-				new linux_target("musl-armhf"),
-				new linux_target("musl-riscv64"),
 				new linux_target("arm64"),
-				new linux_target("armhf"),
-				new linux_target("armsf"),
-				new linux_target("mips64"),
-				new linux_target("s390x"),
-				new linux_target("ppc64le"),
 				new linux_target("riscv64"),
+                new linux_target("loongarch64"),
 			};
 
 			write_linux_multi(
